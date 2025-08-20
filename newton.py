@@ -13,12 +13,10 @@ def dir_2(x, f, eps=0.001):
     f: function to evaluate.
     eps: value to use when approximating the second derivative. It serves as h in the average rate of change of the function. Default value is 0.001.
     """
-    # We need to use approximations of the first derivative to calculate the second derivative.
+    # We use approximations of the first derivative to calculate the second.
     f1 = dir_1(x, f, eps)
     f1_eps = dir_1(x + eps, f, eps)
-    return (
-        f1_eps - f1
-    ) / eps  # We calculate the average rate of change of the first derivative
+    return (f1_eps - f1) / eps
 
 
 def optimize(x_0, f, eps=0.001, tol=0.00001):
