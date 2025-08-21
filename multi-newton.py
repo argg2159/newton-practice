@@ -15,6 +15,6 @@ def multi_optimize(x0, f, tol=1e-5):
         H = scipy.differentiate.hessian(f, x0)
         grad = scipy.differentiate.derivative(f, x0)
         
-        x1 = x0 - solve(H, grad)
+        x1 = x0 - scipy.linalg.solve(H, grad)
         
     return x1
