@@ -19,7 +19,7 @@ def dir_2(x, f, eps=0.001):
     return (f1_eps - f1) / eps
 
 
-def optimize(x_0, f, eps=0.001, tol=0.00001):
+def optimize(x_0, f, eps=0.001, tol=1e-8):
     """Runs Newton's method to minimize a function
     x_0: starting value to begin approximation, should be close to an initial guess of the minimum value
     f: function to optimize.
